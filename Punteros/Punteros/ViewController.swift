@@ -56,11 +56,11 @@ extension ViewController: ARSCNViewDelegate {
                 self.sceneView.scene.rootNode.addChildNode(sphereNode)
             } else {
                 let pointer = SCNNode(geometry: SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0.01))
-                pointer.name = "Yusepe"
+                pointer.name = "Ball"
                 pointer.position = frontOfCamera
                 
                 self.sceneView.scene.rootNode.enumerateChildNodes( {(node, _) in
-                    if node.name == "Yusepe" {
+                    if node.name == "Ball" {
                         node.removeFromParentNode()
                     }
                 })
